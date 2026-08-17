@@ -14,7 +14,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-3 text-xl text-zinc-400">
-            Smart Automation System
+            Interactive Robotics Platform
           </p>
 
           <p className="mt-6 max-w-lg leading-7 text-zinc-400">

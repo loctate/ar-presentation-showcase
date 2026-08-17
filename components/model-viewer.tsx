@@ -12,8 +12,8 @@ export default function ModelViewer() {
 
   return (
     <ModelViewerElement
-      src="/models/astronaut.glb"
-      alt="Interactive 3D demonstration model"
+      src="/models/nova-x1.glb"
+      alt="NOVA X1 interactive robotics demonstration model"
       camera-controls
       auto-rotate
       shadow-intensity="1"
