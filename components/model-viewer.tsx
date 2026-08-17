@@ -339,6 +339,10 @@ export default function ModelViewer() {
           src="/models/nova-x1.glb"
           alt="NOVA X1 interactive robotics demonstration model"
           camera-controls
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          ar-placement="floor"
+          ar-scale="auto"
           camera-target={defaultCamera.target}
           camera-orbit={defaultCamera.orbit}
           field-of-view={defaultCamera.fieldOfView}
@@ -359,6 +363,15 @@ export default function ModelViewer() {
               "radial-gradient(circle at center, #20242b 0%, #0b0d10 68%)",
           }}
         >
+          <button
+            type="button"
+            slot="ar-button"
+            className="absolute bottom-4 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-full bg-amber-400 px-5 py-3 text-[11px] font-semibold tracking-[0.12em] text-black shadow-[0_10px_35px_rgba(251,191,36,0.20)] transition hover:scale-[1.02] hover:bg-amber-300"
+            aria-label="View NOVA X1 in augmented reality"
+          >
+            VIEW IN YOUR SPACE
+          </button>
+
           <button
             type="button"
             slot="hotspot-vision"
