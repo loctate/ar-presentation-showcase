@@ -35,7 +35,7 @@ export default function ModelViewer() {
   }
 
   return (
-    <div className="flex h-full min-h-[520px] flex-col">
+    <div className="flex h-full min-h-[430px] flex-col sm:min-h-[520px]">
       <div className="relative flex-1">
         <ModelViewerElement
           ref={viewerRef}
@@ -49,14 +49,14 @@ export default function ModelViewer() {
           style={{
             width: "100%",
             height: "100%",
-            minHeight: "440px",
+            minHeight: "360px",
             background:
               "radial-gradient(circle at center, #1f2937 0%, #09090b 65%)",
           }}
         />
       </div>
 
-      <div className="border-t border-white/10 px-4 py-4">
+      <div className="border-t border-white/10 px-3 py-4 sm:px-4">
         <p className="mb-3 text-center text-xs font-semibold tracking-[0.2em] text-zinc-500">
           MOTION DEMO
         </p>
