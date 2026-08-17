@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "typecheck": "next typegen && tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit",
+    "qr:generate": "node scripts/generate-qr.mjs"
   },
   "dependencies": {
     "@google/model-viewer": "4.3.1",
@@ -23,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
+    "qrcode": "1.5.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import ModelViewer from "../components/model-viewer";
 
@@ -350,7 +351,88 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="order-7 border-t border-white/10 py-24 lg:order-none lg:py-28">
+          <section
+            id="scan"
+            className="order-7 scroll-mt-24 border-t border-white/10 py-20 lg:order-none lg:py-24"
+          >
+            <p className="text-[10px] font-medium tracking-[0.25em] text-zinc-500 sm:text-xs">
+              05 / SCAN TO EXPERIENCE
+            </p>
+
+            <h2 className="mt-5 max-w-lg text-3xl font-semibold tracking-tight sm:text-4xl">
+              Take the NOVA X1
+              <br />
+              experience with you.
+            </h2>
+
+            <p className="mt-7 max-w-xl leading-8 text-zinc-400 sm:text-zinc-500">
+              Scan the QR code with a mobile device to open the live
+              interactive presentation directly in your browser.
+            </p>
+
+            <div className="mt-10 grid gap-6 rounded-[28px] border border-white/10 bg-white/[0.02] p-5 sm:grid-cols-[180px_1fr] sm:items-center sm:p-6">
+              <div className="mx-auto w-full max-w-[180px] rounded-2xl bg-white p-3">
+                <Image
+                  src="/qr/nova-x1-presentation.png"
+                  width={1024}
+                  height={1024}
+                  alt="QR code to open the NOVA X1 interactive presentation"
+                  className="h-auto w-full"
+                />
+              </div>
+
+              <div>
+                <div className="flex items-center gap-3">
+                  <span className="h-2 w-2 rounded-full bg-amber-400" />
+
+                  <p className="text-[10px] font-semibold tracking-[0.2em] text-amber-400">
+                    LIVE PRESENTATION
+                  </p>
+                </div>
+
+                <h3 className="mt-4 text-xl font-semibold text-zinc-100">
+                  Scan. Open. Explore.
+                </h3>
+
+                <p className="mt-3 text-sm leading-7 text-zinc-500">
+                  No application installation is required for this demo.
+                  Open the public presentation and interact with NOVA X1
+                  directly from the browser.
+                </p>
+
+                <a
+                  href="https://ar-presentation-showcase.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex break-all text-xs text-zinc-400 underline decoration-white/20 underline-offset-4 transition hover:text-white"
+                >
+                  ar-presentation-showcase.vercel.app
+                </a>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {[
+                    "Rotate & Zoom",
+                    "Motion Demo",
+                    "Component Inspection",
+                    "Camera Focus",
+                  ].map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-500"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <p className="mt-5 text-[9px] leading-5 tracking-[0.08em] text-zinc-700">
+              QR TARGET · AR-PRESENTATION-SHOWCASE.VERCEL.APP
+            </p>
+          </section>
+
+          <section className="order-8 border-t border-white/10 py-24 lg:order-none lg:py-28">
             <p className="text-[10px] font-medium tracking-[0.25em] text-amber-400 sm:text-xs">
               INTERACTIVE PRESENTATION
             </p>
