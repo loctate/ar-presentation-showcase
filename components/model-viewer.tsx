@@ -343,6 +343,7 @@ export default function ModelViewer() {
           ar-modes="webxr scene-viewer quick-look"
           ar-placement="floor"
           ar-scale="auto"
+          xr-environment
           camera-target={defaultCamera.target}
           camera-orbit={defaultCamera.orbit}
           field-of-view={defaultCamera.fieldOfView}
@@ -369,8 +370,25 @@ export default function ModelViewer() {
             className="absolute bottom-4 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-full bg-amber-400 px-5 py-3 text-[11px] font-semibold tracking-[0.12em] text-black shadow-[0_10px_35px_rgba(251,191,36,0.20)] transition hover:scale-[1.02] hover:bg-amber-300"
             aria-label="View NOVA X1 in augmented reality"
           >
-            VIEW IN YOUR SPACE
+            VIEW IN AR
           </button>
+
+          <div
+            id="ar-placement-prompt"
+            slot="ar-prompt"
+            className="pointer-events-none absolute bottom-24 left-1/2 z-30 hidden w-[min(88%,320px)] -translate-x-1/2 rounded-2xl border border-white/15 bg-black/70 px-5 py-4 text-center text-white shadow-2xl backdrop-blur-xl"
+          >
+            <div className="mx-auto mb-3 h-8 w-8 rounded-full border-2 border-amber-400/30 border-t-amber-400 motion-safe:animate-spin" />
+
+            <p className="text-[10px] font-semibold tracking-[0.2em] text-amber-400">
+              FINDING A SURFACE
+            </p>
+
+            <p className="mt-2 text-xs leading-5 text-zinc-300">
+              Move your phone slowly and point the camera toward a clear,
+              flat floor.
+            </p>
+          </div>
 
           <button
             type="button"
@@ -540,6 +558,17 @@ export default function ModelViewer() {
           </div>
         )}
       </div>
+      <style jsx global>{`
+        model-viewer[ar-status="session-started"] #ar-placement-prompt {
+          display: block;
+        }
+
+        model-viewer[ar-status="object-placed"] #ar-placement-prompt,
+        model-viewer[ar-status="not-presenting"] #ar-placement-prompt,
+        model-viewer[ar-status="failed"] #ar-placement-prompt {
+          display: none;
+        }
+      `}</style>
     </div>
   );
 }

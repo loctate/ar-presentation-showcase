@@ -415,6 +415,7 @@ export default function Home() {
                     "Motion Demo",
                     "Component Inspection",
                     "Camera Focus",
+                    "Augmented Reality",
                   ].map((item) => (
                     <span
                       key={item}
