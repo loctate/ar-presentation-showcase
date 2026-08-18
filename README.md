@@ -175,6 +175,8 @@ ar-presentation-showcase/
 │   └── generate-qr.mjs
 ├── docs/
 │   └── screenshots/
+├── docs/
+│   └── screenshots/
 ├── package.json
 └── README.md
 ```
